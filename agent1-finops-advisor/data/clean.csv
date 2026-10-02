@@ -1,0 +1,12 @@
+resource_id,service,resource_type,region,instance_size,avg_cpu_pct,monthly_cost_usd,pricing_model,attached,egress_gb
+syn-i-001,EC2,instance,ap-southeast-2,large,62.0,140.00,reserved,true,20
+syn-i-002,EC2,instance,ap-southeast-2,xlarge,71.0,280.00,savings-plan,true,35
+syn-i-003,EC2,instance,ap-southeast-2,medium,48.0,70.00,reserved,true,12
+syn-i-004,EC2,instance,ap-southeast-2,2xlarge,66.0,560.00,reserved,true,50
+syn-i-005,EC2,instance,ap-southeast-1,large,28.0,140.00,on-demand,true,8
+syn-i-006,EC2,instance,ap-southeast-2,small,33.0,35.00,on-demand,true,5
+syn-v-001,EBS,volume,ap-southeast-2,n/a,0.0,40.00,n/a,true,0
+syn-v-002,EBS,volume,ap-southeast-2,n/a,0.0,60.00,n/a,true,0
+syn-v-003,EBS,volume,ap-southeast-1,n/a,0.0,25.00,n/a,true,0
+syn-dt-001,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,90.00,on-demand,true,300
+syn-dt-002,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,45.00,on-demand,true,150
