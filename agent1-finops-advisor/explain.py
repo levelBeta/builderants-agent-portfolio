@@ -56,7 +56,7 @@ def _facts(f):
         target = NEXT_SIZE_DOWN.get(f["instance_size"], "a smaller size")
         return (
             f"Finding: {rid} is a {f['instance_size']} instance in {region} "
-            f"whose average CPU is {f['avg_cpu_pct']}%, so most of its capacity is unused.\n"
+            f"which is oversized for its workload.\n"
             f"Monthly cost: {cost}. Estimated monthly saving: {saving} (assumes one size down).\n"
             f"Recommended action: resize it from {f['instance_size']} to {target}."
         )
