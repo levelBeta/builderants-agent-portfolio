@@ -12,7 +12,9 @@ All data in this repository is synthetic.
 
 ## Agents
 
-Coming soon.
+1. [FinOps Waste & Savings Advisor](agent1-finops-advisor/README.md): read-only SQL analysis of a synthetic cloud bill, with a local LLM that only explains findings.
+
+Agents 2 to 5 are planned and not built yet.
 
 ## License
 
