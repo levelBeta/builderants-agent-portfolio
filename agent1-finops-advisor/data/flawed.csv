@@ -10,6 +10,9 @@ syn-v-002,EBS,volume,ap-southeast-2,n/a,0.0,60.00,n/a,true,0
 syn-v-003,EBS,volume,ap-southeast-1,n/a,0.0,25.00,n/a,true,0
 syn-dt-001,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,90.00,on-demand,true,300
 syn-dt-002,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,45.00,on-demand,true,150
+syn-i-204,EC2,instance,ap-southeast-2,2xlarge,20.0,560.00,reserved,true,10
+syn-i-206,EC2,instance,ap-southeast-2,large,39.9,140.00,on-demand,true,10
+syn-dt-202,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,90.00,on-demand,true,1000
 syn-i-101,EC2,instance,ap-southeast-2,xlarge,1.2,280.00,on-demand,true,4
 syn-i-102,EC2,instance,ap-southeast-2,large,2.5,140.00,on-demand,true,3
 syn-i-103,EC2,instance,ap-southeast-1,medium,0.8,70.00,on-demand,true,2
@@ -25,3 +28,8 @@ syn-i-122,EC2,instance,ap-southeast-2,large,65.0,140.00,on-demand,true,22
 syn-i-123,EC2,instance,ap-southeast-2,2xlarge,58.0,560.00,on-demand,true,45
 syn-dt-101,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,216.00,on-demand,true,2400
 syn-dt-102,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,135.00,on-demand,true,1500
+syn-i-201,EC2,instance,ap-southeast-2,large,4.9,140.00,on-demand,true,5
+syn-i-202,EC2,instance,ap-southeast-2,2xlarge,5.0,560.00,on-demand,true,5
+syn-i-203,EC2,instance,ap-southeast-2,2xlarge,19.9,560.00,on-demand,true,5
+syn-i-205,EC2,instance,ap-southeast-2,large,40.0,140.00,on-demand,true,5
+syn-dt-201,DataTransfer,data_transfer,ap-southeast-2,n/a,0.0,90.00,on-demand,true,1001

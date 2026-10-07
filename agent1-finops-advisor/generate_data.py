@@ -34,6 +34,13 @@ HEALTHY = [
     row("syn-dt-002", "DataTransfer", "data_transfer", AP2, "n/a", 0.0, 45.00, "on-demand", True, 150),
 ]
 
+# Boundary rows just outside each threshold: must NOT fire.
+HEALTHY += [
+    row("syn-i-204", "EC2", "instance", AP2, "2xlarge", 20.0, 560.00, "reserved", True, 10),
+    row("syn-i-206", "EC2", "instance", AP2, "large", 39.9, 140.00, "on-demand", True, 10),
+    row("syn-dt-202", "DataTransfer", "data_transfer", AP2, "n/a", 0.0, 90.00, "on-demand", True, 1000),
+]
+
 # Problem rows: each one should trigger exactly one rule.
 PROBLEMS = {
     # Rule 1: idle compute (CPU under 5)
@@ -58,6 +65,15 @@ PROBLEMS = {
     "syn-dt-102": row("syn-dt-102", "DataTransfer", "data_transfer", AP2, "n/a", 0.0, 135.00, "on-demand", True, 1500),
 }
 
+# Boundary rows just inside each threshold: each fires exactly one rule.
+PROBLEMS.update({
+    "syn-i-201": row("syn-i-201", "EC2", "instance", AP2, "large", 4.9, 140.00, "on-demand", True, 5),
+    "syn-i-202": row("syn-i-202", "EC2", "instance", AP2, "2xlarge", 5.0, 560.00, "on-demand", True, 5),
+    "syn-i-203": row("syn-i-203", "EC2", "instance", AP2, "2xlarge", 19.9, 560.00, "on-demand", True, 5),
+    "syn-i-205": row("syn-i-205", "EC2", "instance", AP2, "large", 40.0, 140.00, "on-demand", True, 5),
+    "syn-dt-201": row("syn-dt-201", "DataTransfer", "data_transfer", AP2, "n/a", 0.0, 90.00, "on-demand", True, 1001),
+})
+
 # Partial: about half the waste has been fixed (those rows are gone from the bill).
 PARTIAL_IDS = [
     "syn-i-101",
@@ -66,6 +82,8 @@ PARTIAL_IDS = [
     "syn-i-121", "syn-i-122",
     "syn-dt-101",
 ]
+
+PARTIAL_IDS += ["syn-i-201", "syn-dt-201"]
 
 SCENARIOS = {
     "flawed": list(PROBLEMS.keys()),
