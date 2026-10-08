@@ -79,7 +79,7 @@ Before any real demo, delete `audit_log.jsonl` so the log starts empty. In a UI 
 - **Savings are rough.** The percentages are flat illustrative figures, not quotes, and R5 has no estimate at all.
 - **Explanation checks are narrow.** They catch severity words, numbers or sizes not in the facts, and a missing action. They cannot catch an invented cause or a logical slip. In one UI run, an egress explanation confused a threshold with a cost. A reply can pass every check and still be subtly wrong.
 - **Template fallbacks happen.** Some replies fall back to a fixed sentence, and the UI does not currently show why.
-- **Small samples.** Speed figures use five findings per model on one machine. Two totals repeated to the decimal across runs, which I cannot explain, so treat the timings as approximate.
+- **Small samples.** Speed figures use five findings per model on one machine. Totals varied slightly between runs (for example 14.7s, then 14.1s for qwen2.5:3b), so treat the timings as approximate.
 - **Sovereignty check is a sample, not proof.** It covers TCP only, takes snapshots every 0.2 seconds, and could miss a very short connection. Detection of an external connection was not tested live. Only the loopback classification and a loopback control were.
 - **The claim is about one process.** It says this process tree made no external TCP connection. It says nothing about the rest of the machine.
 - **Audit log scope.** It detects edits to the file after the fact. It does not stop someone deleting the whole log or rewriting every entry consistently.
